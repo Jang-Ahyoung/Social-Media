@@ -1,0 +1,10 @@
+.container {
+  flex: 5;
+  height: 90vh;
+  overflow-y: scroll;
+}
+
+.wrapper {
+  padding: 8px 20px;
+  padding-bottom: 0;
+}
