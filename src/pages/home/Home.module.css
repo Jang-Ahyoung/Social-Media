@@ -1,0 +1,15 @@
+.container {
+  background-color: #dedaff;
+  padding: 50px;
+}
+
+.context {
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 30px;
+}
+
+.section {
+  display: flex;
+  width: 100%;
+}
