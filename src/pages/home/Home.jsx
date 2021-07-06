@@ -11,8 +11,10 @@ export default function Home() {
                 <Topbar />
                 <section className={styles.section}>
                     <Sidebar />
-                    <Feed />
-                    <Rightbar />
+                    <div className={styles.right}>
+                        <Feed />
+                        <Rightbar />
+                    </div>
                 </section>
             </div>
         </div>

@@ -9,7 +9,18 @@
   border-radius: 30px;
 }
 
-.section {
+.section,
+.right {
   display: flex;
   width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+  .right {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .context {
+    padding: 20px 0px;
+  }
 }
