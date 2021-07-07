@@ -49,11 +49,14 @@
   justify-content: space-between;
   user-select: none;
 }
+.fileInput,
 .options {
   display: flex;
   align-items: center;
-  margin-left: 5px;
   cursor: pointer;
+}
+.options {
+  margin-left: 5px;
   width: 100%;
 }
 .optionsText {
