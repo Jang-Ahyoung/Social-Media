@@ -1,20 +1,28 @@
 .container {
-  width: 100%;
   border-radius: 10px;
   box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
   padding: 30px;
   margin: 15px 0;
   margin-bottom: 6px;
+  padding-top: 20px;
 }
 
 .Top_title {
+  margin-top: 10px;
   display: flex;
   justify-content: space-between;
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
 }
-.Top_title p:first-child {
+.Top_title p {
   font-size: 25px;
+}
+.Top_title p:last-child {
+  user-select: none;
+  cursor: pointer;
+}
+.Top_title p:last-child:hover {
+  transform: scale(120%);
 }
 .Top_Desc {
   display: flex;
@@ -41,7 +49,7 @@
 }
 .text {
   margin: 30px 0;
-  font-size: 13px;
+  font-size: 20px;
   line-height: 22px;
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
@@ -67,6 +75,7 @@
 
 .location {
   width: 100%;
+  margin-top: 15px;
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
@@ -81,7 +90,7 @@
   color: pink;
 }
 .Bottom {
-  margin: 10px 0;
+  margin-top: 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -92,12 +101,12 @@
 }
 .BottomIcon {
   margin-right: 15px;
-  font-size: 15px !important;
+  font-size: 18px !important;
   cursor: pointer;
   transition: 0.5s !important;
 }
 .BottomIcon:hover {
-  transform: scale(120%);
+  transform: scale(130%);
 }
 .comments {
   background-color: #28feb2;
@@ -106,4 +115,13 @@
   padding: 10px 25px;
   border-radius: 12px;
   cursor: pointer;
+}
+.comments:hover {
+  transform: scale(108%);
+}
+.BookedIcon {
+  color: plum;
+}
+.BottomBookedIcon {
+  color: plum;
 }
