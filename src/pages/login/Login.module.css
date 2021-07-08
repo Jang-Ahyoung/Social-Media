@@ -1,0 +1,147 @@
+.container {
+  background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+  background-color: #8ec5fc;
+  min-height: 100vh;
+  font-family: "Encode Sans SC", sans-serif;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Iconcontainer {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: flex;
+}
+
+.Icon {
+  font-size: 30px;
+  margin-left: 10px;
+  transform: translateY(5px);
+}
+.Icon:hover {
+  color: white;
+}
+
+.joinIcon {
+  animation: jump 0.7s ease infinite alternate;
+  margin-right: 5px;
+}
+
+.Iconspan:hover {
+  color: white;
+  font-size: 18px;
+}
+@keyframes jump {
+  to {
+    transform: translateY(-5px);
+  }
+  from {
+    transform: translateY(4px);
+  }
+}
+
+.context {
+  width: 30%;
+  min-width: 400px;
+  height: 84vh;
+  max-height: 750px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 30px;
+  z-index: 1000;
+  box-shadow: 9px 8px 11px 0px rgba(50, 50, 50, 0.67);
+  border-left: 2px solid rgba(172, 172, 172, 0.5);
+}
+.context > p {
+  transform: translate(110px, 25px) rotate(30deg);
+}
+
+.Top {
+  justify-content: flex-end;
+}
+.title {
+  letter-spacing: 15px;
+  font-size: 50px;
+  text-transform: uppercase;
+  font-family: "Encode Sans SC", sans-serif;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.Registertitle {
+  font-size: 40px;
+  margin-bottom: 3vh;
+}
+.inputContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+.input,
+.Register_input {
+  padding: 15px 10px;
+  width: 80%;
+  user-select: auto;
+  border: none;
+  outline: none;
+  border-bottom: 3px solid black;
+  margin-bottom: 25px;
+  font-size: 20px;
+  transition: 0.5s;
+  letter-spacing: 1px;
+}
+.Register_input {
+  margin-bottom: 2vh;
+}
+.Register_input:focus {
+  border-bottom: 5px solid #c5fcb0;
+}
+.input:focus {
+  border-bottom: 5px solid #b0cefc; /* b0cefc */
+}
+.button,
+.signUp {
+  font-size: 20px;
+  width: 80%;
+  height: 50px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(70, 86, 228);
+  margin-top: 20px;
+}
+
+.signUp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  transition: 0.1s;
+  border: 3px solid rgb(70, 86, 228);
+}
+.button:hover {
+  letter-spacing: 10px;
+}
+.signUp:hover {
+  letter-spacing: -1px;
+  color: white;
+  background-color: rgb(70, 86, 228);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}
