@@ -1,7 +1,7 @@
 .container {
   flex: 5;
-  height: 90vh;
-  overflow-y: scroll;
+  /* height: 90vh;
+  overflow-y: scroll; */
 }
 
 .wrapper {
