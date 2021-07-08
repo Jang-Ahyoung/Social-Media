@@ -2,6 +2,8 @@ import axios from 'axios';
 import styles from './Post.module.css';
 import { useEffect, useState } from 'react';
 import { format } from 'timeago.js';
+import { useContext } from 'react';
+import { AuthContext } from '../../context/AuthContext';
 import { FolderSharedRounded, LoyaltyTwoTone, Room, FavoriteOutlined, FavoriteBorderOutlined, FolderOutlined } from '@material-ui/icons';
 
 export default function Post({ post }) {
@@ -10,14 +12,25 @@ export default function Post({ post }) {
     const [isLiked, setIsLiked] = useState(false);
     const [isBooked, setIsBooked] = useState(false);
     const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+    const { user: currentUser } = useContext(AuthContext);
 
     const likeHandler = () => {
+        try {
+            axios.put("/posts/" + post._id + "/like", { userId: currentUser._id });
+        } catch (err) {
+            console.log(err);
+        }
         setLike(isLiked ? like - 1 : like + 1);
         setIsLiked(!isLiked);
     }
+
     const bookeHandler = () => {
         setIsBooked(!isBooked);
     }
+
+    useEffect(() => {
+        setIsLiked(post.likes.includes(currentUser._id))
+    }, [currentUser._id, post.likes]);
 
     useEffect(() => {
         const fetchUser = async () => {
@@ -45,7 +58,7 @@ export default function Post({ post }) {
                 </div>
                 <div className={styles.Top_Desc}>
                     <div className={styles.User}>
-                        <img className={styles.UserImg} src={user.profilePicture || PF + "noAvatar.png"} alt="userProflie" />
+                        <img className={styles.UserImg} src={user.profilePicture ? PF + user.profilePicture : PF + "noAvatar.png"} alt="userProflie" />
                         <span className={styles.UserName}> {user.username}</span>
                     </div>
                     <div className={styles.Date}>
@@ -58,8 +71,12 @@ export default function Post({ post }) {
                     {post?.desc}
                 </div>
                 <div className={styles.Img}>
-                    <img className={styles.postImage} src={PF + post.img} alt="postImg" />
-                    <img className={styles.postImage} src="/assets/post/10.jpeg" alt="postImg" />
+                    {post.img &&
+                        <>
+                            <img className={styles.postImage} src={PF + post.img} alt="postImg" />
+                            <img className={styles.postImage} src="/assets/post/10.jpeg" alt="postImg" />
+                        </>
+                    }
                 </div>
             </div>
             <div className={styles.location}>
