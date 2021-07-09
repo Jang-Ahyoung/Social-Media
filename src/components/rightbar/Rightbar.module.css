@@ -1,0 +1,87 @@
+.container {
+  flex: 1.5;
+  padding: 20px;
+  padding-top: 5px;
+}
+
+.friendList,
+.infoList {
+  list-style: none;
+  width: 100%;
+  margin: 10px 0;
+  padding-left: 0;
+}
+.UserFriendContainer > span {
+  color: black;
+}
+.friendInfo {
+  display: flex;
+  align-items: center;
+}
+.ImgContainer {
+  position: relative;
+}
+.Img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.online {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: limegreen;
+  position: absolute;
+  top: -2px;
+  right: 5px;
+  border: 1px solid white;
+}
+
+.InfoContainer > span:first-child {
+  margin-right: 10px;
+}
+.InfoContainer > span {
+  line-height: 30px;
+}
+
+.UserFriendstitle {
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+.title {
+  margin-bottom: 0px;
+}
+.UserFriendInfo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+  margin: auto;
+}
+.UserFriendContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 8px 0;
+}
+.UserFriendContainer > span {
+  margin: 8px 0;
+  font-size: 18px;
+  text-align: center;
+}
+.UserFriendImg {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 900px) {
+  .friendInfo > span {
+    display: none;
+  }
+  .container {
+    padding-bottom: 0;
+  }
+}
