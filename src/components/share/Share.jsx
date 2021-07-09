@@ -1,5 +1,5 @@
 import styles from './Share.module.css';
-import { PermMedia, Label, Room, EmojiEmotions } from "@material-ui/icons";
+import { PermMedia, Label, Room, EmojiEmotions, Cancel } from "@material-ui/icons";
 import { useContext, useRef, useState } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import axios from 'axios';
@@ -41,6 +41,12 @@ export default function Share() {
                 <input className={styles.Input} ref={post} placeholder={`What's in your mind ${user.username}?`} type="text" />
             </div>
             <hr className={styles.hr} />
+            {file && (
+                <div className={styles.uploadContainer}>
+                    <img className={styles.uploadImg} alt="uploadImg" src={URL.createObjectURL(file)} />
+                    <Cancel className={styles.cancelImg} onClick={() => setFile(null)} />
+                </div>
+            )}
             <form className={styles.Bottom} onSubmit={submitHandler}>
                 <div className={styles.options}>
                     <label htmlFor="file" className={styles.fileInput}>
