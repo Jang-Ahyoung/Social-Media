@@ -5,6 +5,7 @@
 
 .context {
   background-color: white;
+  box-shadow: 5px 0px 16px -8px rgba(0, 0, 0, 0.808);
   padding: 20px 30px;
   border-radius: 30px;
 }
