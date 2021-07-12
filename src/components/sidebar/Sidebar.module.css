@@ -97,3 +97,10 @@
   object-fit: cover;
   margin-right: 10px;
 }
+
+@media screen and (max-width: 950px) {
+  .container {
+    display: none;
+    width: 0;
+  }
+}

@@ -6,6 +6,8 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   background-color: rgba(255, 255, 255);
   user-select: none;
 }
@@ -60,7 +62,11 @@
 .icon {
   font-size: 25px;
 }
-
+.userprofileImg {
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+}
 .iconBadge {
   font-size: 10px;
   display: flex;
@@ -83,4 +89,14 @@
 }
 .right > span:hover {
   transform: scale(110%);
+}
+
+@media screen and (max-width: 800px) {
+  .middle {
+    display: none;
+    width: 0;
+  }
+  .right {
+    width: 50%;
+  }
 }

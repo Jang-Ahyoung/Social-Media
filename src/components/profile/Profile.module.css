@@ -73,3 +73,9 @@
 .unfollowBtn:hover {
   letter-spacing: 2px;
 }
+
+@media screen and (max-width: 600px) {
+  .profileCover {
+    width: 97.2%;
+  }
+}
