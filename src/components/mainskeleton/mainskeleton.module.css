@@ -1,0 +1,82 @@
+.container {
+  border-radius: 10px;
+  box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+  padding: 30px;
+  margin-bottom: 15px;
+}
+
+.User {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.Bottom {
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.BottomLeft {
+  display: flex;
+  align-items: center;
+}
+.IconSkeleton {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.TitleSkeleton {
+  width: 50%;
+  height: 45px;
+  border-radius: 15px;
+  margin-top: 15px;
+  transform: translateX(-3px);
+}
+.profileSkeleton {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.nameSkeleton,
+.commemtSkeleton {
+  width: 140px;
+  height: 35px;
+  border-radius: 10px;
+}
+
+.textSkeleton,
+.text2Skeleton {
+  width: 200px;
+  height: 35px;
+  border-radius: 10px;
+}
+
+.text2Skeleton {
+  width: 300px;
+  margin: 10px 0 50px 0;
+}
+
+.nameSkeleton,
+.profileSkeleton,
+.TitleSkeleton,
+.IconSkeleton,
+.textSkeleton,
+.text2Skeleton,
+.commemtSkeleton {
+  animation: skeleton 1s infinite alternate;
+  background-color: rgb(165, 161, 161);
+}
+.commemtSkeleton {
+  width: 120px;
+  background-color: #28feb2;
+}
+@keyframes skeleton {
+  to {
+    opacity: 0.7;
+  }
+}
