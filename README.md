@@ -5,7 +5,7 @@
 ![issue bedge](https://img.shields.io/badge/react-v%2017.0.2-blue)
 ![issue bedge](https://img.shields.io/badge/yarn-v%201.22.10-yellow)<br />
 
-
+![home](https://user-images.githubusercontent.com/71692593/125627369-4c849dde-f67b-4530-87ae-f16c7bbabf3e.gif)
 
 ## 💙 developer
  > [장아영 ( Jang-Ahyoung ) ](https://github.com/Jang-Ahyoung)<br />
