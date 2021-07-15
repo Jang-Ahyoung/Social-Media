@@ -1,9 +1,11 @@
-.container {
+.container,
+.onLinecontainer {
   flex: 1.5;
-  padding: 20px;
-  padding-top: 5px;
+  padding: 5px 20px;
 }
-
+.container {
+  padding-right: 0;
+}
 .friendList,
 .infoList {
   list-style: none;
@@ -45,7 +47,6 @@
 .InfoContainer > span {
   line-height: 30px;
 }
-
 .UserFriendstitle {
   margin-top: 25px;
   margin-bottom: 15px;
@@ -53,22 +54,16 @@
 .title {
   margin-bottom: 0px;
 }
-.UserFriendInfo {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-flow: wrap;
-  margin: auto;
-}
+
 .UserFriendContainer {
   display: flex;
-  flex-direction: column;
-  margin: 8px 0;
+  flex-wrap: wrap;
 }
-.UserFriendContainer > span {
-  margin: 8px 0;
+.username {
   font-size: 18px;
   text-align: center;
+  color: black;
+  transition: 0.2s;
 }
 .UserFriendImg {
   width: 100px;
@@ -76,12 +71,32 @@
   object-fit: cover;
   border-radius: 5px;
 }
-
+.username,
+.UserFriendImg {
+  margin: 5px;
+}
+.UserFriendImg {
+  margin-bottom: 0;
+}
+.username:hover,
+.UserFriendImg:hover {
+  transform: scale(105%);
+}
 @media screen and (max-width: 900px) {
   .friendInfo > span {
     display: none;
   }
   .container {
     padding-bottom: 0;
+    padding-left: 5px;
+  }
+  .onLinecontainer {
+    padding-left: 28px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding-left: 40px;
   }
 }
