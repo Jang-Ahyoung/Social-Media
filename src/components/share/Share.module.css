@@ -42,6 +42,7 @@
 }
 .uploadContainer {
   position: relative;
+  margin-bottom: 10px;
 }
 .uploadImg {
   width: 100%;

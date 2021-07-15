@@ -41,9 +41,14 @@
   margin-right: 5px;
   object-fit: cover;
 }
-.UserName {
-  font-size: 14px;
+.UserName,
+.dateFont {
+  font-size: 15px;
   margin-left: 3px;
+}
+.UserName:hover {
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 .text {
   margin: 30px 0;
