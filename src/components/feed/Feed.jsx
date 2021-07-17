@@ -5,9 +5,11 @@ import styles from './Feed.module.css';
 import axios from 'axios';
 import { useContext } from 'react';
 import { AuthContext } from '../../context/AuthContext';
+import Skeleton from '../skeleton/Skeleton';
 
 export default function Feed({ username }) {
     const [posts, setPosts] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
     const { user } = useContext(AuthContext);
     useEffect(() => {
         const fetchPosts = async () => {
@@ -15,16 +17,20 @@ export default function Feed({ username }) {
             setPosts(res.data.sort((post1, post2) => {
                 return new Date(post2.createdAt) - new Date(post1.createdAt);
             }));
+            setTimeout(() => {
+                setIsLoading(false);
+            }, 1500);
         }
         fetchPosts();
     }, [username, user._id]);
     return (
         <div className={styles.container}>
             <div className={styles.wrapper}>
-                {(!username || username == user.username) && <Share />}
-                {posts.map((post) => (
-                    <Post key={post._id} post={post} />
-                ))}
+                {(!username || username === user.username) && <Share />}
+                {isLoading ? <Skeleton type="mainFeed" /> :
+                    posts.map((post) => (
+                        <Post key={post._id} post={post} />
+                    ))}
             </div>
         </div>
     )
