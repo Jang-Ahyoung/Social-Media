@@ -5,7 +5,11 @@
 ![issue bedge](https://img.shields.io/badge/react-v%2017.0.2-blue)
 ![issue bedge](https://img.shields.io/badge/yarn-v%201.22.10-yellow)<br />
 
-![main](https://user-images.githubusercontent.com/71692593/125725362-c932066f-8dae-41f9-a90d-a7ed09ffda77.gif)
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/71692593/125782096-78da91e0-dda9-4862-86ba-06a9dfa2410c.gif)
+
+![2](https://user-images.githubusercontent.com/71692593/125782161-6e67cb52-6de3-4cc6-9f7a-64dd2d35342f.gif)
+
+
 
 ## 💙 developer
  > [장아영 ( Jang-Ahyoung ) ](https://github.com/Jang-Ahyoung)<br />
